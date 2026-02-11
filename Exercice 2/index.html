@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Formulaire d'inscripton</h3>
+    <div id="nom_personne_div">
+        <label for="nom_personne">Le nom de personne :</label>
+        <input id="nom_personne" type="text" placeholder="Saisir le nom" required> <br>
+        <span id="nom_personne_span">le champ et obligatoire *</span>
+    </div>
+    <br>
+    <div id="age_personne_div">
+        <label for="age_personne">Age de personne :</label>
+        <input id="age_personne" type="number" placeholder="Saisir l'age de personne" required> <br>
+        <span id="age_personne_span">le champ et obligatoire *</span>
+
+    </div>
+    <br>
+    <div id="email_personne_div">
+        <label for="email_personne">Entrer email de personne :</label>
+        <input id="email_personne" type="email" placeholder="Saisir l'email de personne" required> <br>
+        <span id="email_personne_span">le champ et obligatoire *</span>
+
+    </div>
+    <br>
+    <button onclick="addpersonne()">Ajouter</button>
+    <br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_table">
+
+        </tbody>
+    </table>
+    <script src="app.js"></script>
+</body>
+
+</html>
