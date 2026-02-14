@@ -33,3 +33,28 @@ produit.forEach((e)=>{
         console.log(e.nom)
     }
 })
+///Partie C — Calculs
+/// 7. Calculer et afficher :
+//le nombre total de produits
+console.log("le nombre de produits c'est :")
+console.log(produit.length)
+//la valeur totale du stock de la boutique (somme de prix * stock pour chaque produit)
+console.log("la valeur totale du stock de la boutique")
+const valeurTotaleStock=produit.reduce((total,e)=>total+(e.prix*e.stock),0)
+console.log('Valeur total du stock :',valeurTotaleStock,"DH")
+// le produit le moins cher
+console.log('le produit le mois cher cest :')
+let produitmois=produit[0]
+let produitplus=produit[0]
+produit.forEach((e)=>{
+    if(e.prix < produitmois.prix){
+        produitmois=e
+    }
+    if(e.prix > produitplus.prix){
+        produitplus=e
+    }
+    
+});
+console.log('le produit mois cher :' ,produitmois.nom,' et le prix cest :',produitmois.prix);
+console.log('le produit plus cher :' ,produitplus.nom,' et le prix cest :',produitplus.prix);
+
