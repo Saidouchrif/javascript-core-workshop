@@ -83,3 +83,31 @@ if (index !== -1) {
 }
 
 console.log("Nouvelle liste des produits :", produit);
+/// Partie E — Tri et statistiques
+//11. Trier les produits par prix croissant, puis afficher le tableau trié.
+const triPrixCroissant = [...produit].sort((a, b) => a.prix - b.prix);
+console.log("Tri par prix croissant :", triPrixCroissant);
+
+// 12) Trier par stock décroissant
+const triStockDecroissant = [...produit].sort((a, b) => b.stock - a.stock);
+console.log("Tri par stock décroissant :", triStockDecroissant);
+
+// 13) Afficher la catégorie la plus représentée
+const compteurCategorie = {};
+
+produit.forEach(e => {
+  const cat = e.categorie.toLowerCase();
+  compteurCategorie[cat] = (compteurCategorie[cat] || 0) + 1;
+});
+
+let categorieMax = null;
+let maxCount = 0;
+
+for (const cat in compteurCategorie) {
+  if (compteurCategorie[cat] > maxCount) {
+    maxCount = compteurCategorie[cat];
+    categorieMax = cat;
+  }
+}
+
+console.log("Catégorie la plus représentée :", categorieMax, "(", maxCount, "produits )");
