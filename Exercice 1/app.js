@@ -57,4 +57,29 @@ produit.forEach((e)=>{
 });
 console.log('le produit mois cher :' ,produitmois.nom,' et le prix cest :',produitmois.prix);
 console.log('le produit plus cher :' ,produitplus.nom,' et le prix cest :',produitplus.prix);
+// Partie D — Mise à jour des données
+//si le produit existe, demander une quantité à ajouter au stock
+let idproduit=prompt('donner id de produit ')
+produit.find((e)=>{
+    if(e.id==idproduit){
+        let stockplus=parseInt(prompt('entre le quantite'))
+        /// mettre à jour le stock et afficher le produit modifié
+        e.stock+=stockplus
+        console.log('le produit de ce id est :'+' '+e.nom+' le stock actuaile est :'+e.stock)
+    }else{
+        console.log("le produit introuvable")
+    } 
+})
+// 10. Demander à l’utilisateur un id, puis supprimer le produit correspondant du tableau.
+let idSupprimer = parseInt(prompt("Donner l'id du produit à supprimer :"));
 
+let index = produit.findIndex(e => e.id === idSupprimer);
+
+if (index !== -1) {
+  let deletedProduit = produit.splice(index, 1);
+  console.log("Produit supprimé :", deletedProduit[0]);
+} else {
+  console.log("Produit introuvable");
+}
+
+console.log("Nouvelle liste des produits :", produit);
