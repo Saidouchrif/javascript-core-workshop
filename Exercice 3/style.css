@@ -1,0 +1,116 @@
+        :root {
+            --brand-1: #0f766e;
+            --brand-2: #f59e0b;
+            --bg-1: #f8fafc;
+            --bg-2: #ecfeff;
+            --text-main: #0f172a;
+            --text-soft: #475569;
+            --line: #dbe3eb;
+        }
+
+        body {
+            font-family: "Manrope", sans-serif;
+            color: var(--text-main);
+            min-height: 100vh;
+            background:
+                radial-gradient(1200px 600px at -10% -20%, #a7f3d0 0%, transparent 60%),
+                radial-gradient(900px 500px at 115% 10%, #fde68a 0%, transparent 55%),
+                linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
+        }
+
+        .page-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+            border-radius: 1rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .panel-header {
+            border-bottom: 1px solid var(--line);
+            padding: 1rem 1.25rem;
+        }
+
+        .panel-title {
+            margin: 0;
+            font-weight: 800;
+            font-size: 1.02rem;
+        }
+
+        .panel-body {
+            padding: 1.2rem;
+        }
+
+        .form-label {
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-control {
+            border: 1px solid #cbd5e1;
+            border-radius: 0.75rem;
+            padding-top: 0.62rem;
+            padding-bottom: 0.62rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-control:focus {
+            border-color: #0f766e;
+            box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.15);
+        }
+
+        .btn-add {
+            font-weight: 700;
+            border: none;
+            border-radius: 0.75rem;
+            padding: 0.68rem 1rem;
+            background: linear-gradient(135deg, var(--brand-1), #115e59);
+        }
+
+        .btn-add:hover {
+            background: linear-gradient(135deg, #0d9488, #0f766e);
+        }
+
+        .table-wrap {
+            max-height: 620px;
+            overflow: auto;
+        }
+
+        .table {
+            margin-bottom: 0;
+            border-color: #dbe3eb;
+        }
+
+        .table thead th {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            color: #ffffff;
+            font-weight: 700;
+            border-bottom: 0;
+            background: linear-gradient(120deg, #0f172a, #1e293b);
+            white-space: nowrap;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f0fdfa;
+        }
+
+        .subtitle {
+            color: var(--text-soft);
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 992px) {
+            .sticky-col {
+                position: sticky;
+                top: 1.25rem;
+            }
+        }
