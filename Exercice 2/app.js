@@ -29,7 +29,7 @@ function addpersonne() {
     }
     if (check) {
         tr.innerHTML = `
-    <td>${nom}</td>    <td>${age}</td>    <td>${email}</td>         <td><button onclick="deleteRow(this)">Delete</button></td>
+    <td>${nom}</td>    <td>${age}</td>    <td>${email}</td>         <td><button type="button" class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button></td>
     `
 
         tbody.appendChild(tr)
